@@ -12,29 +12,31 @@ export default function Concepts() {
         const styles = {
             backgroundColor: props.isSelected ? "#FCFCFC" : "#FFFFFF",
             border: props.isSelected ? "1px solid #DFDFDF" : "1px solid #FFFFFF",
-            color: props.isSelected ? "#1C1D22" : "#B6B6B6"
+            color: props.isSelected ? "#1C1D22" : "#B6B6B6",
         }
         return (
-            <div onClick={toggleHeader} style={styles} className="header-toggle-option">{props.text}</div>
+            <div onClick={toggleHeader} style={styles} className="m-0 cursor-pointer w-1/2 rounded-full">
+                <div className="text-lg h-full text-center leading-5 font-mukta font-bold w-3/5 mx-auto my-2">{props.text}</div>
+            </div>
         )
     }
 
 
     function Header(props) {
         return (
-            <div className="flex flex-row border rounded-3xl w-full justify-between">
-                <HeaderToggleOption text="habitual" isSelected={headerHabituals}/>
-                <HeaderToggleOption text="intentional" isSelected={!headerHabituals}/>
+            <div className="flex flex-row w-11/12 items-center border rounded-full justify-between">
+                <HeaderToggleOption text="habitual reactions" isSelected={headerHabituals}/>
+                <HeaderToggleOption text="intentional responses" isSelected={!headerHabituals}/>
             </div>
         )
     }
 
     function InfoBox(props) {
         return (
-            <div className="infobox-overlay" onClick={props.toggleInfoBox}>
+            <div className="fixed inset-0" onClick={props.toggleInfoBox}>
             <div className="infobox">
-                <div className="infobox-title">{infoBox.title}</div>
-                <div className="infobox-content">{infoBox.content}</div>
+                <div className="font-mukta text-gray-600 text-lg font-bold text-center mx-4 my-8 leading-5">{infoBox.title}</div>
+                <div className="font-mukta text-base text-gray-500 mx-5">{infoBox.content}</div>
             </div>
             </div>
         )
@@ -42,7 +44,9 @@ export default function Concepts() {
 
     function Concept(props) {
         return (
-            <div className="concept" onClick={props.handleConceptClick}>{props.text}</div>
+            <div className="cursor-pointer flex flex-col justify-center align-middle" onClick={props.handleConceptClick}>
+                <div className="select-none text-center tracking-wide font-mukta text-gray-600">{props.text}</div>
+            </div>
         )
     }
 
@@ -71,9 +75,9 @@ export default function Concepts() {
     }
 
     return (
-        <div className="flex flex-col h-full w-full">
+        <div className="flex items-center flex-col h-full w-full">
             <Header />
-            <div className="grid w-10/12 h-full mt-2 grid-cols-2 grid-rows-{8}">
+            <div className="content-grid">
                 {headerHabituals && habituals}
                 {!headerHabituals && intentionals}
             </div>

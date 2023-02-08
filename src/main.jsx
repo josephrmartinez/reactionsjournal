@@ -15,28 +15,28 @@ import Insights from './routes/insights';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/reactionsjournal/",
     element: <Root />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/account",
+        path: "/reactionsjournal/account",
         element: <Account />,
       },
       {
-        path: "/add",
+        path: "/reactionsjournal/add",
         element: <Add />,
       },
       {
-        path: "/concepts",
+        path: "/reactionsjournal/concepts",
         element: <Concepts />,
       },
       {
-        path: "/insights",
+        path: "/reactionsjournal/insights",
         element: <Insights />,
       },
       {
-        path: "/logs",
+        path: "/reactionsjournal/logs",
         element: <Logs />,
       },
     ],
