@@ -7,11 +7,11 @@ import {
 } from "react-router-dom";
 import Root from './routes/root';
 import ErrorPage from "./error-page"
-import Account from './routes/Account';
-import Add from './routes/Add';
-import Concepts from './routes/Concepts';
-import Logs from './routes/Logs';
-import Insights from './routes/Insights';
+import Account from './routes/account';
+import Add from './routes/add';
+import Concepts from './routes/concepts';
+import Logs from './routes/logs';
+import Insights from './routes/insights';
 
 const router = createBrowserRouter([
   {
