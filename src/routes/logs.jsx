@@ -1,5 +1,5 @@
 export default function Logs() {
     return (
-        <div>Logs</div>
+        <img src="src/assets/logs demo.png"/>
     )
 }

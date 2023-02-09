@@ -64,8 +64,7 @@ body{
     border-radius: 5px;
 }
 
-input:not([type="radio"]):not([type="checkbox"]),
-button {
+input:not([type="radio"]):not([type="checkbox"]){
     appearance: none;
     border: none;
     outline: none;
