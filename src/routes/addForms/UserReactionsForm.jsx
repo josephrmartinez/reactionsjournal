@@ -46,7 +46,7 @@ export default function UserReactionsForm({updateFields, userReactions }) {
 
     return (
         <FormWrapper title="My habitual reactions:">
-        <div className="form-toggle-grid">
+        <div className="form-grid">
       {reactions.map((reaction) => (
         <div
           onClick={reactionClicked}
@@ -61,3 +61,5 @@ export default function UserReactionsForm({updateFields, userReactions }) {
         </FormWrapper>
   );
 }
+
+

@@ -1,5 +1,5 @@
-
 - add "add entry" section to component
+
 - develop dummy starter data to populate logs section
 - finish design for "logs" "insights -- placeholder" and "account -- functionality to clear local storage"
 - create functionality for "add entry" to add item into local storage. onsubmit update storage load logs 
