@@ -1,46 +1,17 @@
 import FormWrapper from "./FormWrapper";
-import { useState } from "react";
 
 export default function UserResponsesForm({updateFields, userResponses }) {
-  const [responses, setResponses] = useState([
-    { id: "1", name: "empathy", selected: false },
-    { id: "2", name: "quiet listening", selected: false },
-    { id: "3", name: "reflecting feelings", selected: false },
-    { id: "4", name: "being present", selected: false },
-    { id: "5", name: "curiosity", selected: false },
-    { id: "6", name: "speaking up", selected: false },
-    { id: "7", name: "take responsibility", selected: false },
-    { id: "8", name: "assume positive intent", selected: false }
-  ]);
-
   const responseClicked = (e) => {
-    // max 6 selected
-    if (!e.target.classList.contains("selected")) {
-      const selectedCount = responses.filter((response) => response.selected).length;
-      if (selectedCount === 6) {
-        return;
-      }
-    }
-
-    setResponses(
-      responses.map((response) =>
-        response.id === e.target.getAttribute("data-id")
-          ? { ...response, selected: !response.selected }
-          : response
-      )
-    );
-      
-      let selectedItems = responses.filter(response => response.selected)
-      let responsesList = selectedItems.map(each => each.name)
-      updateFields({ userResponses: responsesList })
-    //   HOW TO ADD TWO WAY DATA BINDINGS ON DIV TOGGLE ITEMS LIKE THIS?
-      
+      updateFields({userResponses: userResponses.map((response) =>
+          response.id === e.target.getAttribute("data-id")
+            ? { ...response, selected: !response.selected }
+            : response) })
   };
-
+  
     return (
         <FormWrapper title="My intentional responses:">
         <div className="form-grid">
-      {responses.map((response) => (
+      {userResponses.map((response) => (
         <div
           onClick={responseClicked}
           data-id={response.id}
@@ -54,5 +25,3 @@ export default function UserResponsesForm({updateFields, userResponses }) {
         </FormWrapper>
   );
 }
-
-

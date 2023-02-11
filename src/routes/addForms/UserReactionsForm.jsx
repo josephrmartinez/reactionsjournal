@@ -1,8 +1,6 @@
 import FormWrapper from "./FormWrapper";
-import { useState } from "react";
 
 export default function UserReactionsForm({updateFields, userReactions }) {
-
   const reactionClicked = (e) => {
     updateFields({userReactions: userReactions.map((reaction) =>
         reaction.id === e.target.getAttribute("data-id")
