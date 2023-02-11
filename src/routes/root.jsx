@@ -6,7 +6,7 @@ export default function Root() {
         <div className="flex flex-col justify-center w-full ">
               <div className="text-3xl text-center text-teal-700 font-bold font-fraunces drop-shadow tracking-wide select-none">antipatterns</div></div>
         <div id="detail" className="flex items-center w-full h-full flex-col"><Outlet /></div>
-        <nav className="flex items-center w-full shadow-inner">
+        <nav className="flex items-center w-full shadow-inner sm:shadow-none">
           <ul className="grid grid-cols-5 gap-1 w-full h-full">
             <Link to={`/reactionsjournal/concepts`} className="flex flex-col items-center justify-evenly rounded-full">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7 stroke-gray-500">

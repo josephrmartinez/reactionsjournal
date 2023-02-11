@@ -15,22 +15,7 @@ const INITIAL_DATA = {
     "conversationDate": "",
     "conversationLocation": "",
     "conversationWith": [],
-    "userReactions": [
-        { id: "1", name: "giving advice", selected: false },
-        { id: "2", name: "defensiveness", selected: false },
-        { id: "3", name: "changing subject", selected: false },
-        { id: "4", name: "diagnosing", selected: false },
-        { id: "5", name: "dismissing feelings", selected: false },
-        { id: "6", name: "sarcasm", selected: false },
-        { id: "7", name: "taking it personally", selected: false },
-        { id: "8", name: "shutting down", selected: false },
-        { id: "9", name: "devil's advocate", selected: false },
-        { id: "10", name: "intellectualizing", selected: false },
-        { id: "11", name: "sympathy", selected: false },
-        { id: "12", name: "one-upping", selected: false },
-        { id: "13", name: "commiserating", selected: false },
-        { id: "14", name: "personal storytelling", selected: false }
-    ],
+    "userReactions": [],
     "userResponses": [],
     "partnerReactions": [],
     "partnerResponses": [],
@@ -44,6 +29,7 @@ export default function Add() {
         setData(prevData => {
             return {...prevData, ...fields}
         })
+        console.log(data)
     }
 
 
@@ -69,11 +55,10 @@ export default function Add() {
         <div className="font-mukta h-full w-4/5 flex flex-col items-center">
             <form className="h-full w-full grid grid-cols-1  grid-rows-[10%_80%_10%]" onSubmit={onSubmit}>
                 {step}
-    
-                <div className="flex flex-row justify-around">
-                    {currentStepIndex !== 0 && <button type="button" onClick={back}>back</button>}
-                    {<button type="submit">{isLastStep ? "log entry" : "next"}</button>}
-                </div>
+            <div className="flex flex-row justify-around">
+                {currentStepIndex !== 0 && <button type="button" onClick={back}>back</button>}
+                {<button type="submit">{isLastStep ? "log entry" : "next"}</button>}
+            </div>
             </form>
             </div>
     )

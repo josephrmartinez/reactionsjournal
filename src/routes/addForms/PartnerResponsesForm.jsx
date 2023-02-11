@@ -38,7 +38,7 @@ export default function PartnerResponsesForm({updateFields, partnerResponses }) 
   };
 
     return (
-        <FormWrapper title="My intentional responses:">
+        <FormWrapper title="Their intentional responses:">
         <div className="form-grid">
       {responses.map((response) => (
         <div

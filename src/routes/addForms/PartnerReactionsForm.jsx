@@ -45,7 +45,7 @@ export default function PartnerReactionsForm({updateFields, partnerReactions }) 
   };
 
     return (
-        <FormWrapper title="My habitual reactions:">
+        <FormWrapper title="Their habitual reactions:">
         <div className="form-grid">
       {reactions.map((reaction) => (
         <div
