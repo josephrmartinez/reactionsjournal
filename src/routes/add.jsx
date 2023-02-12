@@ -14,7 +14,7 @@ import { nanoid } from "nanoid"
 
 const INITIAL_DATA = {
     "conversationID": nanoid(),
-    "conversationDate": "",
+    "conversationDate": new Date(),
     "conversationLocation": "",
     "conversationWith": "",
     "userReactions": [
@@ -104,9 +104,10 @@ export default function Add() {
         <div className="font-mukta h-full w-4/5 flex flex-col items-center">
             <form className="h-full w-full grid grid-cols-1  grid-rows-[10%_80%_10%]" onSubmit={onSubmit}>
                 {step}
-            <div className="flex flex-row justify-around">
-                {currentStepIndex !== 0 && <button type="button" onClick={back}>back</button>}
-                {<button type="submit">{isLastStep ? "log entry" : "next"}</button>}
+            <div className="flex flex-row justify-around items-start">
+                {currentStepIndex === 0 && <div className="w-16"></div>}
+                {currentStepIndex !== 0 && <button type="button" className="w-16" onClick={back}>back</button>}
+                {<button className="w-16" type="submit">{isLastStep ? "log entry" : "next"}</button>}
             </div>
             </form>
             </div>

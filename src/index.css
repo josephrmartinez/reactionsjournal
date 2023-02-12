@@ -63,16 +63,6 @@ body{
     cursor: pointer;
     border-radius: 5px;
 }
-/* 
-input:([type="text"]):not([type="checkbox"]){
-    appearance: none;
-    border: none;
-    outline: none;
-    background: none;
-    cursor: initial;
-    font-weight: bold;
-    color: darkgreen;
-} */
 
 .date-toggle-div {
     background-color: white;

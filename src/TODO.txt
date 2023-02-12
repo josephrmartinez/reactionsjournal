@@ -1,6 +1,6 @@
 - implement two-way data bindings on "conversationDate" ?
+    - create new Date obj on load initial data. Format obj for calendar, pass as initial value. 
 
-- implement style change on selecting new route
 - finish design for add conversation first page
 - finish design for "logs"
 
