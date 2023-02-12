@@ -1,7 +1,3 @@
-- implement two-way data bindings on "conversationDate" ?
-    - create new Date obj on load initial data. Format obj for calendar, pass as initial value. 
-
-- finish design for add conversation first page
 - finish design for "logs"
 
 - develop dummy starter data to populate logs section with scroll and expand/contract functionality

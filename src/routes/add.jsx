@@ -13,11 +13,11 @@ import { nanoid } from "nanoid"
 
 
 const INITIAL_DATA = {
-    "conversationID": nanoid(),
-    "conversationDate": new Date(),
-    "conversationLocation": "",
-    "conversationWith": "",
-    "userReactions": [
+    conversationID: nanoid(),
+    conversationDate: new Date(),
+    conversationLocation: "",
+    conversationWith: "",
+    userReactions: [
     { id: "1", name: "giving advice", selected: false },
     { id: "2", name: "defensiveness", selected: false },
     { id: "3", name: "changing subject", selected: false },
@@ -33,7 +33,7 @@ const INITIAL_DATA = {
     { id: "13", name: "commiserating", selected: false },
     { id: "14", name: "personal storytelling", selected: false }
   ],
-    "userResponses": [
+    userResponses: [
     { id: "1", name: "empathy", selected: false },
     { id: "2", name: "quiet listening", selected: false },
     { id: "3", name: "reflecting feelings", selected: false },
@@ -43,7 +43,7 @@ const INITIAL_DATA = {
     { id: "7", name: "take responsibility", selected: false },
     { id: "8", name: "assume positive intent", selected: false }
   ],
-    "partnerReactions": [
+    partnerReactions: [
     { id: "1", name: "giving advice", selected: false },
     { id: "2", name: "defensiveness", selected: false },
     { id: "3", name: "changing subject", selected: false },
@@ -59,7 +59,7 @@ const INITIAL_DATA = {
     { id: "13", name: "commiserating", selected: false },
     { id: "14", name: "personal storytelling", selected: false }
   ],
-    "partnerResponses": [
+    partnerResponses: [
     { id: "1", name: "empathy", selected: false },
     { id: "2", name: "quiet listening", selected: false },
     { id: "3", name: "reflecting feelings", selected: false },
@@ -69,7 +69,8 @@ const INITIAL_DATA = {
     { id: "7", name: "take responsibility", selected: false },
     { id: "8", name: "assume positive intent", selected: false }
   ],
-    "notes": ""
+    notes: "",
+    entryExpanded: false
 }
 
 export default function Add() {
