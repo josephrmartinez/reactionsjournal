@@ -1,11 +1,16 @@
-- add "add entry" section to component
+- implement two-way data bindings on "conversationDate" ?
 
-- develop dummy starter data to populate logs section
-- finish design for "logs" "insights -- placeholder" and "account -- functionality to clear local storage"
+- implement style change on selecting new route
+- finish design for add conversation first page
+- finish design for "logs"
+
+- develop dummy starter data to populate logs section with scroll and expand/contract functionality
+- add expand/contract functionality
+- add delete functionality
+
 - create functionality for "add entry" to add item into local storage. onsubmit update storage load logs 
-- filler values in unfinished sections
-- push code to gh pages
 
-- add edit / update functionality
-- push mvp of app once there is starter data populating logs and it is possible to create update delete an entry.
+- create functionality for "clear local storage" on account page to work as intended
+
+- push mvp of app once there is starter data populating logs and it is possible to create and delete an entry.
 

@@ -7,11 +7,13 @@ import PartnerReactionsForm from "./addForms/PartnerReactionsForm"
 import PartnerResponsesForm from "./addForms/PartnerResponsesForm"
 import NotesAndSubmitForm from "./addForms/NotesAndSubmitForm"
 import { Navigate } from "react-router-dom"
+import { nanoid } from "nanoid"
+
 
 
 
 const INITIAL_DATA = {
-    "conversationID": "",
+    "conversationID": nanoid(),
     "conversationDate": "",
     "conversationLocation": "",
     "conversationWith": "",
@@ -77,7 +79,6 @@ export default function Add() {
         setData(prevData => {
             return {...prevData, ...fields}
         })
-        console.log(data)
     }
 
 
