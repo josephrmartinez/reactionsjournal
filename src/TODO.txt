@@ -1,10 +1,9 @@
-- finish design for "logs"
 
-- develop dummy starter data to populate logs section with scroll and expand/contract functionality
-- add expand/contract functionality
-- add delete functionality
+- figure out where to place local storage, how to maintain state across react router
 
-- create functionality for "add entry" to add item into local storage. onsubmit update storage load logs 
+- add delete functionality on log items
+- add item into local storage onsubmit of form
+- navigate to logs page onsubmit 
 
 - create functionality for "clear local storage" on account page to work as intended
 
