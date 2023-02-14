@@ -13,8 +13,7 @@ export default function Logs() {
     useEffect(() => {
     localStorage.setItem("reactionsJournalLogData", JSON.stringify(logData))
   }, [logData])
-
-    console.log(logData)    
+   
     
     function handleExpandContent(id) {
         setLogData(prevLogData => prevLogData.map(each => {
@@ -24,7 +23,6 @@ export default function Logs() {
     }
 
     function handleDeleteLog(id) {
-        console.log(id)
         setLogData(prevLogData => prevLogData.filter(each => each.conversationID !== id)
         )
     }
@@ -34,7 +32,6 @@ export default function Logs() {
         let dateObj = new Date(props.conversationDate)
         let dateString = dateObj.toDateString()
         let displayDate = dateString.slice(0, dateString.length - 5)
-        console.log(displayDate)
 
         let userReacted = props.userReactions.some(each => each.selected)
         let userResponded = props.userResponses.some(each => each.selected)
@@ -47,7 +44,7 @@ export default function Logs() {
         })
         let userReactionsGrid = userReactionsArray.map(each => {
             return (
-                <div className="w-fit text-gray-500 text-sm">{each}</div>
+                <div className="w-fit text-gray-500 text-sm" key={each}>{each}</div>
             )
         })
 
@@ -57,7 +54,7 @@ export default function Logs() {
         })
         let userResponsesGrid = userResponsesArray.map(each => {
             return (
-                <div className="w-fit text-gray-500 text-sm">{each}</div>
+                <div className="w-fit text-gray-500 text-sm" key={each}>{each}</div>
             )
         })
 
@@ -67,7 +64,7 @@ export default function Logs() {
         })
         let partnerReactionsGrid = partnerReactionsArray.map(each => {
             return (
-                <div className="w-fit text-gray-500 text-sm">{each}</div>
+                <div className="w-fit text-gray-500 text-sm" key={each}>{each}</div>
             )
         })
 
@@ -77,7 +74,7 @@ export default function Logs() {
         })
         let partnerResponsesGrid = partnerResponsesArray.map(each => {
             return (
-                <div className="w-fit text-gray-500 text-sm">{each}</div>
+                <div className="w-fit text-gray-500 text-sm" key={each}>{each}</div>
             )
         })
 

@@ -1,12 +1,34 @@
+General:
 - figure out 100% height issue with browser url bar.
+- fix styling on body: content is pulling to the right on resize
+- design: change background color to slightly off white
 
-- figure out where to place local storage, how to maintain state across react router
+Concepts:
+- fix header toggle divs from resizing to one row at different breakpoints
+- design: how to make grid words look clickable?
+- design: change color for selected text in toggle. softer dark gray
+- design: better design for popup infobox
+- design/code: implement slideshow click functionality on infobox popups. nav to next item with arrows
 
-- add delete functionality on log items
+Logs:
+- fix: prevent content from moving to the left when scroll bar appears
+- conditionally render text for when all logs are cleared. prompt use to add a log.
+
+Insights:
+- design: conditionally render prompt to keep adding logs when logs < 5
+- code: implement check for n logs.
+- design / code: conditionally render component with insights if n logs > 5
+
+
+Account:
+- reword for clarity
+- conditionally render prompt based on whether there is any custom data actually in localstorage
+
+
+Add:
+- bug fix: text input on location field is too wide; causes browser to scroll to the right
 - navigate to logs page onsubmit 
 
-- create functionality for "clear local storage" on account page to work as intended
 
-- bug fix: text input on location field is too wide; causes browser to scroll to the right
-- push mvp of app once there is starter data populating logs and it is possible to create and delete an entry.
+
 
