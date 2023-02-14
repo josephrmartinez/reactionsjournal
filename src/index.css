@@ -10,17 +10,8 @@
     box-sizing: border-box;
 }
 
-#root{
+body {
     height: 100%;
-    width: 100vw;
-    display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-}
-
-body{
-    height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -28,9 +19,18 @@ body{
     justify-content: center;
 }
 
+#root{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+}
+
 .container{
    display: grid;
-   height: 100vh;
+   height: 100%;
    width: 100vw;
    max-width: 640px;
    grid-template-rows: 12.5% 75% 12.5%;

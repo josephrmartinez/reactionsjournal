@@ -13,6 +13,7 @@ Concepts:
 Logs:
 - fix: prevent content from moving to the left when scroll bar appears
 - conditionally render text for when all logs are cleared. prompt use to add a log.
+- ON LOG COMPONENT: render "notes". Will need header as well
 
 Insights:
 - design: conditionally render prompt to keep adding logs when logs < 5
