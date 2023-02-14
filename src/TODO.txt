@@ -1,3 +1,4 @@
+- figure out 100% height issue with browser url bar.
 
 - figure out where to place local storage, how to maintain state across react router
 
@@ -7,5 +8,6 @@
 
 - create functionality for "clear local storage" on account page to work as intended
 
+- bug fix: text input on location field is too wide; causes browser to scroll to the right
 - push mvp of app once there is starter data populating logs and it is possible to create and delete an entry.
 
