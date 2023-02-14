@@ -1,6 +1,8 @@
 import { Outlet, NavLink, Link } from "react-router-dom";
 
+
 export default function Root() {
+
   return (
       <div className="container">
         <div className="flex flex-col justify-center w-full ">

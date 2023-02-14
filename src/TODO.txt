@@ -3,7 +3,6 @@
 - figure out where to place local storage, how to maintain state across react router
 
 - add delete functionality on log items
-- add item into local storage onsubmit of form
 - navigate to logs page onsubmit 
 
 - create functionality for "clear local storage" on account page to work as intended

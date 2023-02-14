@@ -8,6 +8,7 @@ import PartnerResponsesForm from "./addForms/PartnerResponsesForm"
 import NotesAndSubmitForm from "./addForms/NotesAndSubmitForm"
 import { Navigate } from "react-router-dom"
 import { nanoid } from "nanoid"
+import { starterData } from "../starterData"
 
 
 
@@ -98,8 +99,19 @@ export default function Add() {
     function onSubmit(e) {
         e.preventDefault();
         if (!isLastStep) return next()
+
         console.log(data)
-    }
+        // Parse any JSON previously stored in allEntries
+        var existingData = JSON.parse(localStorage.getItem("reactionsJournalLogData"));
+        if(existingData == null) existingData = starterData;
+        
+        localStorage.setItem("entry", JSON.stringify(data));
+        // Save allEntries back to local storage
+        existingData.push(data);
+        console.log(existingData)
+        localStorage.setItem("reactionsJournalLogData", JSON.stringify(existingData));
+    };
+
 
     return (
         <div className="font-mukta h-full w-4/5 flex flex-col items-center">

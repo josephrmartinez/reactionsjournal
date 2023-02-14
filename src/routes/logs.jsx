@@ -1,50 +1,45 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { nanoid } from "nanoid"
 import { starterData } from "../starterData"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons"
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons"
+import { DateTime } from "luxon"
 
 export default function Logs() {
-    const[logData, setLogData] = useState(starterData)
+    const[logData, setLogData] = useState(
+        JSON.parse(localStorage.getItem("reactionsJournalLogData")) || starterData)
     
-    
+    useEffect(() => {
+    localStorage.setItem("reactionsJournalLogData", JSON.stringify(logData))
+  }, [logData])
 
-        
-function handleExpandContent(id) {
-    setLogData(prevLogData => prevLogData.map(each => {
-      return each.conversationID === id ? { ...each, entryExpanded: !each.entryExpanded } : each
-    })
-    )
-  }
+    console.log(logData)    
+    
+    function handleExpandContent(id) {
+        setLogData(prevLogData => prevLogData.map(each => {
+        return each.conversationID === id ? { ...each, entryExpanded: !each.entryExpanded } : each
+        })
+        )
+    }
+
+    function handleDeleteLog(id) {
+        console.log(id)
+        setLogData(prevLogData => prevLogData.filter(each => each.conversationID !== id)
+        )
+    }
  
 
-const logs = logData.map(each => <Log
-    conversationID={each.conversationID}
-    key={each.conversationID}
-    conversationDate={each.conversationDate}
-    conversationLocation={each.conversationLocation}
-    conversationWith={each.conversationWith}
-    userReactions={each.userReactions}
-    userResponses={each.userResponses}
-    partnerReactions={each.partnerReactions}
-    partnerResponses={each.partnerResponses}
-    notes={each.notes}
-    entryExpanded={each.entryExpanded}
-    handleExpandContent={() => handleExpandContent(each.conversationID)}
-    />
-    )
-
     function Log(props) {
-
-        let dateString = props.conversationDate.toDateString();
+        let dateObj = new Date(props.conversationDate)
+        let dateString = dateObj.toDateString()
         let displayDate = dateString.slice(0, dateString.length - 5)
+        console.log(displayDate)
 
         let userReacted = props.userReactions.some(each => each.selected)
         let userResponded = props.userResponses.some(each => each.selected)
         let partnerReacted = props.partnerReactions.some(each => each.selected)
         let partnerResponded = props.partnerResponses.some(each => each.selected)
-    
 
         let userReactionsList = props.userReactions.filter(each => each.selected)
         let userReactionsArray = userReactionsList.map(each => {
@@ -85,9 +80,6 @@ const logs = logData.map(each => <Log
                 <div className="w-fit text-gray-500 text-sm">{each}</div>
             )
         })
-
-
-
 
         return (
             <div className="border rounded-md flex flex-col w-10/12 p-4">
@@ -133,7 +125,7 @@ const logs = logData.map(each => <Log
                 </div>}
                 
                 <div className="grid grid-cols-3">
-                    {props.entryExpanded && <div className="col-start-2 justify-self-center text-sm text-gray-300 px-5 cursor-pointer">delete</div>}
+                    {props.entryExpanded && <div className="col-start-2 justify-self-center text-sm text-gray-300 px-5 cursor-pointer" onClick={props.handleDeleteLog}>delete</div>}
                     <div className="col-start-3 justify-self-end pl-6 cursor-pointer" onClick={props.handleExpandContent}><FontAwesomeIcon icon={props.entryExpanded ? faAngleUp : faAngleDown} size="1x"/></div>
                 </div>
 
@@ -142,7 +134,22 @@ const logs = logData.map(each => <Log
     }
     
 
-
+    const logs = logData.map(each => <Log
+        conversationID={each.conversationID}
+        key={each.conversationID}
+        conversationDate={each.conversationDate}
+        conversationLocation={each.conversationLocation}
+        conversationWith={each.conversationWith}
+        userReactions={each.userReactions}
+        userResponses={each.userResponses}
+        partnerReactions={each.partnerReactions}
+        partnerResponses={each.partnerResponses}
+        notes={each.notes}
+        entryExpanded={each.entryExpanded}
+        handleExpandContent={() => handleExpandContent(each.conversationID)}
+        handleDeleteLog={() => handleDeleteLog(each.conversationID)}
+        />
+        )
 
 
 return (
