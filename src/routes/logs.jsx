@@ -14,8 +14,6 @@ export default function Logs() {
     localStorage.setItem("reactionsJournalLogData", JSON.stringify(logData))
   }, [logData])
    
-    console.log(logData)
-    console.log(logData.length)
     
     function handleExpandContent(id) {
         setLogData(prevLogData => prevLogData.map(each => {
@@ -79,6 +77,9 @@ export default function Logs() {
                 <div className="w-fit text-gray-500 text-sm" key={each}>{each}</div>
             )
         })
+        
+        let notesAdded = (props.notes !== "")
+
 
         return (
             <div className="border rounded-md flex flex-col w-10/12 p-4">
@@ -121,6 +122,15 @@ export default function Logs() {
                         </div>
                         <div className="ml-4 my-5 grid grid-cols-2 auto-rows-auto gap-3">{partnerResponsesGrid}</div>
                         </>}
+                    
+                    {notesAdded &&
+                        <>
+                        <div className="text font-bold text-gray-700">
+                        notes:
+                        </div>
+                        <div className="ml-4 my-5 w-fit text-gray-500 text-sm">{props.notes}</div>
+                        </>
+                    }
                 </div>}
                 
                 <div className="grid grid-cols-3">

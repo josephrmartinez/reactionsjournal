@@ -12,11 +12,11 @@ export default function Concepts() {
         const styles = {
             backgroundColor: props.isSelected ? "#FCFCFC" : "#FFFFFF",
             border: props.isSelected ? "1px solid #DFDFDF" : "1px solid #FFFFFF",
-            color: props.isSelected ? "#1C1D22" : "#B6B6B6",
+            color: props.isSelected ? "#595959" : "#B6B6B6",
         }
         return (
             <div onClick={toggleHeader} style={styles} className="m-0 cursor-pointer w-1/2 h-14 rounded-full flex flex-col items-center justify-center">
-                <div className="text-lg text-center leading-5 font-mukta font-bold w-3/5">{props.text}</div>
+                <div className="text-lg text-center leading-5 font-mukta font-bold tracking-wide w-3/5">{props.text}</div>
             </div>
         )
     }
@@ -35,7 +35,7 @@ export default function Concepts() {
         return (
             <div className="fixed inset-0" onClick={props.toggleInfoBox}>
             <div className="infobox">
-                <div className="font-mukta text-gray-600 text-lg font-bold text-center mx-4 my-8 leading-5">{infoBox.title}</div>
+                <div className="font-mukta text-gray-500 text-lg tracking-wide font-bold text-center mx-4 my-8 leading-5">{infoBox.title}</div>
                 <div className="font-mukta text-base text-gray-500 mx-5">{infoBox.content}</div>
             </div>
             </div>
@@ -45,7 +45,7 @@ export default function Concepts() {
     function Concept(props) {
         return (
             <div className="cursor-pointer flex flex-col justify-center align-middle" onClick={props.handleConceptClick}>
-                <div className="select-none text-center tracking-wide font-mukta text-gray-600">{props.text}</div>
+                <div className="select-none text-center tracking-wide font-mukta text-gray-500 drop-shadow-sm">{props.text}</div>
             </div>
         )
     }

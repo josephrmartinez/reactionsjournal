@@ -2,14 +2,12 @@ import { useEffect, useState } from 'react';
 import FormWrapper from './FormWrapper.jsx'
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
+import { nanoid } from 'nanoid';
 
 
-export default function DateLocationWithForm({ conversationID, conversationDate, conversationLocation, conversationWith, updateFields }) {
-    // const [startDate, setStartDate] = useState(new Date());
+export default function DateLocationWithForm({ conversationID, conversationDate, conversationLocation, conversationWith, updateFields }) {  
     
-    // useEffect(() => {
-    // updateFields({ conversationDate: startDate })
-    // }, [startDate])
+    
     
 return (
     <FormWrapper title="Add conversation:">
@@ -23,7 +21,7 @@ return (
                     style={{ width: "90px" }}
                     className="pl-3 border-none outline-none font-bold text-green-800 text-lg"
                     value={conversationWith}
-                    onChange={e => updateFields({ conversationWith: e.target.value })} />
+                    onChange={e => updateFields({ conversationWith: e.target.value, conversationID: nanoid() })} />
             </div>
             
             <div className='border-b-4 border-amber-500 flex flex-row align-center w-full'>

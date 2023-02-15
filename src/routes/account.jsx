@@ -1,11 +1,26 @@
+import { useState } from "react"
 import { starterData } from "../starterData"
 
 
 export default function Account() {   
-    
+    const [accountData, setAccountData] = useState( 
+        JSON.parse(localStorage.getItem("reactionsJournalLogData")) || starterData)
+        
+
+
     function handleClearLocalStorage() {
+        setAccountData(starterData)
         localStorage.setItem("reactionsJournalLogData", JSON.stringify(starterData))
+        
     }
+
+//     const localStorageData = JSON.parse(localStorage.getItem("reactionsJournalLogData"))
+//     const defaultStarterDataID = localStorageData[0]['conversationID']
+//     let [isDefaultData, setIsDefaultData] = useState()
+//    useEffect(() => {
+//     localStorage.setItem("reactionsJournalLogData", JSON.stringify(logData))
+//   }, [logData])
+
 
     return (
         <div className="font-mukta flex flex-col m-auto w-4/5 text-gray-700">
@@ -15,7 +30,10 @@ export default function Account() {
             
             <div className="my-4">To delete your logs, clear your browsing data or click the button below:</div>
             <div className="m-auto">
-                <button className="bg-white hover:bg-gray-100 active:bg-gray-200 text-gray-800 font-semibold py-2 px-4  border border-gray-400 rounded-full shadow my-5" onClick={handleClearLocalStorage}>clear local storage</button>
+                <button
+                    className="bg-white hover:bg-gray-100 active:bg-gray-200 text-gray-800 font-semibold py-2 px-4  border border-gray-400 rounded-full shadow my-5"
+                    onClick={handleClearLocalStorage}>
+                    {accountData == starterData ? "local storage cleared" : "clear local storage"}</button>
             </div>
             
         </div>

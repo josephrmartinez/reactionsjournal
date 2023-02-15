@@ -1,10 +1,8 @@
 General:
-- figure out 100% height issue with browser url bar.
 - design: change background color to slightly off white
 
 
 Concepts:
-- design: move header toggle down? also move logs down? same start point as addentry headers?
 - design: how to make grid words look clickable?
 - design: change color for selected text in toggle. softer dark gray
 - design: better design for popup infobox
@@ -12,7 +10,7 @@ Concepts:
 
 
 Logs:
-- ON LOG COMPONENT: render "notes". Will need header as well
+- Conditionally render plural
 
 
 Insights:
@@ -22,11 +20,10 @@ Insights:
 
 
 Account:
-- conditionally render prompt based on whether there is any custom data actually in localstorage
 
 
 Add:
-- bug fix: text input on location field is too wide; causes browser to scroll to the right
+
 
 
 

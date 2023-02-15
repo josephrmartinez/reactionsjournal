@@ -7,14 +7,13 @@ import PartnerReactionsForm from "./addForms/PartnerReactionsForm"
 import PartnerResponsesForm from "./addForms/PartnerResponsesForm"
 import NotesAndSubmitForm from "./addForms/NotesAndSubmitForm"
 import { useNavigate } from "react-router-dom"
-import { nanoid } from "nanoid"
 import { starterData } from "../starterData"
 
 
 
 
 const INITIAL_DATA = {
-    conversationID: nanoid(),
+    conversationID: "",
     conversationDate: new Date(),
     conversationLocation: "",
     conversationWith: "",
@@ -110,7 +109,8 @@ export default function Add() {
         existingData.push(data);
         localStorage.setItem("reactionsJournalLogData", JSON.stringify(existingData));
     
-        
+        console.log(data)
+
         navigate('/reactionsjournal/logs')
     };
     
