@@ -3,8 +3,6 @@ General:
 
 
 Concepts:
-- design: how to make grid words look clickable?
-- design: change color for selected text in toggle. softer dark gray
 - design: better design for popup infobox
 - design/code: implement slideshow click functionality on infobox popups. nav to next item with arrows
 

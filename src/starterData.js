@@ -58,7 +58,7 @@ export let starterData = [
     { id: "7", name: "take responsibility", selected: false },
     { id: "8", name: "assume positive intent", selected: false }
   ],
-    notes: "This is just some starter demo data. Delete this entry and start adding your own.",
+    notes: "This is just a starter demo log. Delete this log and start adding your own.",
     entryExpanded: false
         },
         {
@@ -118,7 +118,7 @@ export let starterData = [
     { id: "7", name: "take responsibility", selected: false },
     { id: "8", name: "assume positive intent", selected: false }
   ],
-    notes: "",
+    notes: "This is just a starter demo log. Delete this log and start adding your own.",
     entryExpanded: false
     }
     ]

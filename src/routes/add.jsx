@@ -109,7 +109,6 @@ export default function Add() {
         existingData.push(data);
         localStorage.setItem("reactionsJournalLogData", JSON.stringify(existingData));
     
-        console.log(data)
 
         navigate('/reactionsjournal/logs')
     };

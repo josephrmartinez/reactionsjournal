@@ -4,7 +4,6 @@ export default function Insights() {
     const[logData, setLogData] = useState(
         JSON.parse(localStorage.getItem("reactionsJournalLogData")) || starterData)
     
-    console.log(logData.length)
     
     return (
         <>
