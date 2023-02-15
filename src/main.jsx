@@ -28,8 +28,8 @@ const router = createBrowserRouter([
         element: <Add />,
       },
       {
-        path: "/reactionsjournal/concepts",
         element: <Concepts />,
+        index: true
       },
       {
         path: "/reactionsjournal/insights",

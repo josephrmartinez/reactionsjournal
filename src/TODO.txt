@@ -4,6 +4,7 @@ General:
 - design: change background color to slightly off white
 
 Concepts:
+- make concepts the index page
 - fix header toggle divs from resizing to one row at different breakpoints
 - design: how to make grid words look clickable?
 - design: change color for selected text in toggle. softer dark gray

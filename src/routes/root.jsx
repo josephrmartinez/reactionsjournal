@@ -12,7 +12,8 @@ export default function Root() {
         <nav className="flex items-center w-full shadow-inner sm:shadow-none">
           <ul className="grid grid-cols-5 gap-1 w-full h-full">
           <NavLink
-            to={`/reactionsjournal/concepts`}
+            to={`/reactionsjournal/`}
+            end
             className={({ isActive }) =>
               isActive
                 ? "flex flex-col items-center justify-evenly rounded-full stroke-amber-500 text-gray-700"
