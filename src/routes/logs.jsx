@@ -93,7 +93,7 @@ export default function Logs() {
                     {userReacted &&
                         <>
                         <div className="text font-bold text-gray-700">
-                        reaction(s) I had:
+                            {userReactionsList.length === 1 ? "reaction I had:" : "reactions I had:"}
                         </div>
                         <div className="ml-4 my-5 grid grid-cols-2 auto-rows-auto gap-3">{userReactionsGrid}</div>
                         </>
@@ -102,7 +102,7 @@ export default function Logs() {
                     {partnerReacted &&
                         <>
                         <div className="text font-bold text-gray-700">
-                        reaction(s) I heard:
+                            {partnerReactionsList.length === 1 ? "reaction I heard:" : "reactions I heard:"}
                         </div>
                         <div className="ml-4 my-5 grid grid-cols-2 auto-rows-auto gap-3">{partnerReactionsGrid}</div>
                         </>}
@@ -110,7 +110,7 @@ export default function Logs() {
                     {userResponded &&
                         <>
                         <div className="text font-bold text-gray-700">
-                        response(s) I had:
+                            {userResponsesList.length === 1 ? "response I had:" : "responses I had:"}
                         </div>
                         <div className="ml-4 my-5 grid grid-cols-2 auto-rows-auto gap-3">{userResponsesGrid}</div>
                         </>}
@@ -118,7 +118,7 @@ export default function Logs() {
                     {partnerResponded &&
                         <>
                         <div className="text font-bold text-gray-700">
-                        response(s) I heard:
+                            {partnerResponsesList.length === 1 ? "response I heard:" : "responses I heard:"}
                         </div>
                         <div className="ml-4 my-5 grid grid-cols-2 auto-rows-auto gap-3">{partnerResponsesGrid}</div>
                         </>}
