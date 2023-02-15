@@ -23,7 +23,7 @@ export default function Account() {
 
 
     return (
-        <div className="font-mukta flex flex-col m-auto w-4/5 text-gray-700">
+        <div className="font-mukta flex flex-col m-auto w-8/12 text-gray-700">
             <div className="text text-lg text-center font-bold my-4">No need to create an account.</div>
             <div className="my-4">This site uses local storage to save your log data.</div>
             <div className="my-4">No need to provide your email or remember a password. Your log data is stored on your browser.</div>

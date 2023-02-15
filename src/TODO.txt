@@ -1,5 +1,5 @@
 General:
-- design: change background color to slightly off white
+- design: change background color to slightly off white?
 
 
 Concepts:
@@ -12,11 +12,8 @@ Concepts:
 Logs:
 
 
-
 Insights:
-- design: conditionally render prompt to keep adding logs when logs < 5
-- code: implement check for n logs.
-- design / code: conditionally render component with insights if n logs > 5
+- decide which insights to show. Code implementation
 
 
 Account:
