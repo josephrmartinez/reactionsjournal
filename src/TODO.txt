@@ -4,7 +4,6 @@ General:
 - design: change background color to slightly off white
 
 Concepts:
-- make concepts the index page
 - fix header toggle divs from resizing to one row at different breakpoints
 - design: how to make grid words look clickable?
 - design: change color for selected text in toggle. softer dark gray
@@ -12,7 +11,6 @@ Concepts:
 - design/code: implement slideshow click functionality on infobox popups. nav to next item with arrows
 
 Logs:
-- fix: prevent content from moving to the left when scroll bar appears
 - conditionally render text for when all logs are cleared. prompt use to add a log.
 - ON LOG COMPONENT: render "notes". Will need header as well
 
@@ -23,7 +21,6 @@ Insights:
 
 
 Account:
-- reword for clarity
 - conditionally render prompt based on whether there is any custom data actually in localstorage
 
 

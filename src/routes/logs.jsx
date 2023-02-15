@@ -14,6 +14,8 @@ export default function Logs() {
     localStorage.setItem("reactionsJournalLogData", JSON.stringify(logData))
   }, [logData])
    
+    console.log(logData)
+    console.log(logData.length)
     
     function handleExpandContent(id) {
         setLogData(prevLogData => prevLogData.map(each => {
@@ -149,10 +151,14 @@ export default function Logs() {
         )
 
 
-return (
-    <div className="overflow-y-scroll flex flex-col w-screen h-full items-center gap-4">
-        {logs}
-    </div>
+    return (
+    <>
+        {logData.length === 0 ?
+        <div className="m-auto font-bold">Add entries to view logs.</div> :
+        <div className="overflow-y-scroll flex flex-col w-screen h-full items-center gap-4">
+            {logs}
+        </div>}
+    </>
 );
 
 }
