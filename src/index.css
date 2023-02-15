@@ -10,6 +10,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     height: 100%;
     width: 100vw;
@@ -23,9 +24,9 @@ body {
     height: 100vh;
     width: 100vw;
     display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .container{
@@ -33,7 +34,7 @@ body {
    height: 100%;
    width: 100vw;
    max-width: 640px;
-   grid-template-rows: 12.5% 75% 12.5%;
+   grid-template-rows: 85% 15%;
    justify-items: center;
 }
 
@@ -84,8 +85,7 @@ body {
     display: grid;
     height: 100%;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(8, 1fr);
-    /* margin: 25px; */
+    grid-template-rows: repeat(7, 1fr);
     gap: 12px;
 }
 

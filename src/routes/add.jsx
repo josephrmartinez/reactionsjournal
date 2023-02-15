@@ -6,7 +6,7 @@ import UserResponsesForm from "./addForms/UserResponsesForm"
 import PartnerReactionsForm from "./addForms/PartnerReactionsForm"
 import PartnerResponsesForm from "./addForms/PartnerResponsesForm"
 import NotesAndSubmitForm from "./addForms/NotesAndSubmitForm"
-import { Navigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { nanoid } from "nanoid"
 import { starterData } from "../starterData"
 
@@ -94,33 +94,36 @@ export default function Add() {
             <NotesAndSubmitForm {...data} updateFields={updateFields} />
         ])
     
-    
+    const navigate = useNavigate()
 
     function onSubmit(e) {
         e.preventDefault();
+        
         if (!isLastStep) return next()
 
-        console.log(data)
-        // Parse any JSON previously stored in allEntries
+        // Parse any JSON previously stored
         var existingData = JSON.parse(localStorage.getItem("reactionsJournalLogData"));
         if(existingData == null) existingData = starterData;
         
         localStorage.setItem("entry", JSON.stringify(data));
-        // Save allEntries back to local storage
+        // Save data back to local storage
         existingData.push(data);
-        console.log(existingData)
         localStorage.setItem("reactionsJournalLogData", JSON.stringify(existingData));
+    
+        
+        navigate('/reactionsjournal/logs')
     };
+    
 
 
     return (
         <div className="font-mukta h-full w-4/5 flex flex-col items-center">
             <form className="h-full w-full grid grid-cols-1  grid-rows-[10%_80%_10%]" onSubmit={onSubmit}>
                 {step}
-            <div className="flex flex-row justify-around items-start">
+            <div className="flex flex-row justify-around items-center">
                 {currentStepIndex === 0 && <div className="w-16"></div>}
                 {currentStepIndex !== 0 && <button type="button" className="w-16" onClick={back}>back</button>}
-                {<button className="w-16" type="submit">{isLastStep ? "log entry" : "next"}</button>}
+                <button className="w-16" type="submit">{isLastStep ? "log entry" : "next"}</button>
             </div>
             </form>
             </div>

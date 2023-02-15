@@ -150,7 +150,7 @@ export default function Logs() {
 
 
 return (
-    <div className="overflow-y-auto flex flex-col w-screen items-center gap-4">
+    <div className="overflow-y-scroll flex flex-col w-screen h-full items-center gap-4">
         {logs}
     </div>
 );

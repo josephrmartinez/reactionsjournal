@@ -5,10 +5,8 @@ export default function Root() {
 
   return (
       <div className="container">
-        <div className="flex flex-col justify-center w-full ">
-        <div className="text-3xl text-center text-teal-700 font-bold font-fraunces drop-shadow tracking-wide select-none">antipatterns</div>
-      </div>
-        <div id="detail" className="flex items-center w-screen h-full flex-col overflow-auto"><Outlet /></div>
+        
+        <div id="detail" className="flex items-center w-screen h-full flex-col pt-6"><Outlet /></div>
         <nav className="flex items-center w-full shadow-inner sm:shadow-none">
           <ul className="grid grid-cols-5 gap-1 w-full h-full">
           <NavLink
