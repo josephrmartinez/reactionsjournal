@@ -3,16 +3,19 @@ General:
 - fix styling on body: content is pulling to the right on resize
 - design: change background color to slightly off white
 
+
 Concepts:
-- fix header toggle divs from resizing to one row at different breakpoints
+- fix header toggle divs from resizing to one row at different breakpoints. set minheight
+- design: move header toggle down? also move logs down? same start point as addentry headers?
 - design: how to make grid words look clickable?
 - design: change color for selected text in toggle. softer dark gray
 - design: better design for popup infobox
 - design/code: implement slideshow click functionality on infobox popups. nav to next item with arrows
 
+
 Logs:
-- conditionally render text for when all logs are cleared. prompt use to add a log.
 - ON LOG COMPONENT: render "notes". Will need header as well
+
 
 Insights:
 - design: conditionally render prompt to keep adding logs when logs < 5
@@ -26,7 +29,6 @@ Account:
 
 Add:
 - bug fix: text input on location field is too wide; causes browser to scroll to the right
-- navigate to logs page onsubmit 
 
 
 
