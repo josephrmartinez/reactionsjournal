@@ -1,6 +1,5 @@
 General:
 - figure out 100% height issue with browser url bar.
-- fix styling on body: content is pulling to the right on resize
 - design: change background color to slightly off white
 
 

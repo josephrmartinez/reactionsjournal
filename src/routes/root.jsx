@@ -6,7 +6,7 @@ export default function Root() {
   return (
       <div className="container">
         
-        <div id="detail" className="flex items-center w-screen h-full flex-col pt-6"><Outlet /></div>
+        <div id="detail" className="flex items-center w-full h-full flex-col pt-6"><Outlet /></div>
         <nav className="flex items-center w-full shadow-inner sm:shadow-none">
           <ul className="grid grid-cols-5 gap-1 w-full h-full">
           <NavLink

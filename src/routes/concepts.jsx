@@ -15,8 +15,8 @@ export default function Concepts() {
             color: props.isSelected ? "#1C1D22" : "#B6B6B6",
         }
         return (
-            <div onClick={toggleHeader} style={styles} className="m-0 cursor-pointer w-1/2 rounded-full">
-                <div className="text-lg h-full text-center leading-5 font-mukta font-bold w-3/5 mx-auto my-2">{props.text}</div>
+            <div onClick={toggleHeader} style={styles} className="m-0 cursor-pointer w-1/2 h-14 rounded-full flex flex-col items-center justify-center">
+                <div className="text-lg text-center leading-5 font-mukta font-bold w-3/5">{props.text}</div>
             </div>
         )
     }
