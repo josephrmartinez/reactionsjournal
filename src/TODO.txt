@@ -4,7 +4,6 @@ General:
 
 
 Concepts:
-- fix header toggle divs from resizing to one row at different breakpoints. set minheight
 - design: move header toggle down? also move logs down? same start point as addentry headers?
 - design: how to make grid words look clickable?
 - design: change color for selected text in toggle. softer dark gray

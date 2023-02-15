@@ -1,11 +1,12 @@
 import { Outlet, NavLink, Link } from "react-router-dom";
+import Div100vh from "react-div-100vh";
 
 
 export default function Root() {
 
   return (
+    <Div100vh>
       <div className="container">
-        
         <div id="detail" className="flex items-center w-full h-full flex-col pt-6"><Outlet /></div>
         <nav className="flex items-center w-full shadow-inner sm:shadow-none">
           <ul className="grid grid-cols-5 gap-1 w-full h-full">
@@ -72,7 +73,8 @@ export default function Root() {
           </NavLink>
           </ul>
         </nav>
-    </div>
+      </div>
+      </Div100vh>
   );
 }
 
