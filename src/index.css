@@ -10,10 +10,15 @@
     box-sizing: border-box;
 }
 
+html{
+    overflow: hidden;
+    width: 100%
+}
 
 body {
     height: 100%;
     width: 100vw;
+    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
