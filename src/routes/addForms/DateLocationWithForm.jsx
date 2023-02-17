@@ -11,31 +11,33 @@ export default function DateLocationWithForm({ conversationID, conversationDate,
     
 return (
     <FormWrapper title="Add conversation:">
-        <div className='flex flex-col h-full w-10/12 items-center justify-around'>
-            <div className='border-b-4 border-amber-500 flex flex-row align-center w-full'>
-                <label className='text-lg font-semibold text-gray-700'>conversation with:</label>
-                <input
+        <div className='flex flex-col h-full max-w-[260px] items-left justify-around'>
+            <div>
+            
+            <div className='border-b-2 border-emerald-700/60 flex flex-row align-center w-full'> 
+                <label className='text-lg font-semibold text-gray-700'>with:</label>
+                    <input
                     autoFocus
                     required
                     type="text"
-                    style={{ width: "90px" }}
-                    className="pl-3 border-none outline-none font-bold text-green-800 text-lg"
+                    style={{ width: "160px" }}
+                    className="pl-3 border-none outline-none text-left text-lg"
                     value={conversationWith}
                     onChange={e => updateFields({ conversationWith: e.target.value, conversationID: nanoid() })} />
-            </div>
-            
-            <div className='border-b-4 border-amber-500 flex flex-row align-center w-full'>
+                </div>
+                </div>
+
+            <div className='border-b-2 border-emerald-700/60 flex flex-row align-center w-full'>
                 <label className='text-lg font-semibold text-gray-700 pr-3'>date:</label>
-                {/* <input type="date"  className="pl-5" value={startDate}></input> */}
                 <DatePicker style={{ width: "90px" }} selected={conversationDate} onChange={(date) => updateFields({ conversationDate: date })} />
             </div>
         
-            <div className='border-b-4 border-amber-500 flex flex-row align-center justify-start w-full'>
+            <div className='border-b-2 border-emerald-700/60 flex flex-row align-center justify-start w-full'>
                 <label className='text-lg font-semibold text-gray-700'>location:</label>
                 <input
                     required
                     type="text"
-                    className="pl-3 border-none outline-none font-bold text-green-800 text-lg"
+                    className="pl-3 border-none outline-none text-left text-lg"
                     value={conversationLocation}
                     onChange={e => updateFields({ conversationLocation: e.target.value })} />
             </div>

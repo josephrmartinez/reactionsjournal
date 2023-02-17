@@ -86,7 +86,7 @@ export default function Logs() {
                 <div className="text-gray-500 border-b-2 border-amber-500 mb-4 w-fit">{displayDate}</div>
                 <div className="flex flex-row place-content-between mb-4">
                     <div className="bg-emerald-700/50 font-semibold text-white px-4 py-2 rounded-md">{ props.conversationLocation }</div>
-                    <div className="bg-gray-100 font-semibold text-gray-500 px-4 py-2 rounded-full">{ props.conversationWith }</div>
+                    <div className="bg-white font-semibold border border-gray-200 text-gray-500 px-4 py-2 rounded-full">{ props.conversationWith }</div>
                 </div>
                 
                 {props.entryExpanded && <div>

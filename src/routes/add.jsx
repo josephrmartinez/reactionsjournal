@@ -121,8 +121,8 @@ export default function Add() {
                 {step}
             <div className="flex flex-row justify-around items-center">
                 {currentStepIndex === 0 && <div className="w-16"></div>}
-                {currentStepIndex !== 0 && <button type="button" className="w-16" onClick={back}>back</button>}
-                <button className="w-16" type="submit">{isLastStep ? "log entry" : "next"}</button>
+                {currentStepIndex !== 0 && <button type="button" className="w-16 text-emerald-700/90" onClick={back}>back</button>}
+                <button className="w-16 text-emerald-700/90" type="submit">{isLastStep ? "log entry" : "next"}</button>
             </div>
             </form>
             </div>
