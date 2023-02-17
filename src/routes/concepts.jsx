@@ -5,12 +5,10 @@ import { useState } from "react"
 export default function Concepts() {
     const [headerHabituals, setHeaderHabituals] = useState(true)
     const [infoBox, setInfoBox] = useState({isDisplayed: false, title: "", content: ""})
-    
 
 
     function HeaderToggleOption(props) {
         const styles = {
-            // backgroundColor: props.isSelected ? "#04785780" : "#FFFFFF",
             border: props.isSelected ? "2px solid #04785780" : "none",
             color: props.isSelected ? "#4b5563" : "#B6B6B6",
         }
@@ -34,9 +32,13 @@ export default function Concepts() {
     function InfoBox(props) {
         return (
             <div className="fixed inset-0" onClick={props.toggleInfoBox}>
-            <div className="infobox">
+            <div className="infobox z-40">
                 <div className="font-mukta text-gray-500 text-lg tracking-wide font-bold text-center mx-4 my-8 leading-5">{infoBox.title}</div>
-                <div className="font-mukta text-base text-gray-500 mx-5">{infoBox.content}</div>
+                    <div className="font-mukta text-base text-gray-500 mx-5">{ infoBox.content }</div>
+                    {/* <div className="h-full w-full flex flex-row justify-around">
+                        <div>back</div>
+                        <div>next</div>
+                    </div> */}
             </div>
             </div>
         )
@@ -59,6 +61,9 @@ export default function Concepts() {
     }
 
 
+
+
+
     function handleConceptClick(conceptObj) {
         setInfoBox(prevInfoBox => ({
             isDisplayed: true,
@@ -66,6 +71,7 @@ export default function Concepts() {
             content: conceptObj.description
         }))
     }
+
 
     function toggleInfoBox() {
         setInfoBox(prevInfoBox => ({
@@ -155,7 +161,7 @@ let habitualReactions =
         description: "Listener agrees with the speaker through over-identification; does not honor the uniqueness of speaker's position. 'I know exactly what you mean.' 'I've had that exact experience.'"
     },
     {
-        concept: "personal storytelling",
+        concept: "storytelling",
         fulltitle: "personal storytelling",
         description: "Listener takes the focus away from speaker and tells stories relating back to themself."
     },

@@ -31,7 +31,7 @@ const INITIAL_DATA = {
     { id: "11", name: "sympathy", selected: false },
     { id: "12", name: "one-upping", selected: false },
     { id: "13", name: "commiserating", selected: false },
-    { id: "14", name: "personal storytelling", selected: false }
+    { id: "14", name: "storytelling", selected: false }
   ],
     userResponses: [
     { id: "1", name: "empathy", selected: false },
@@ -57,7 +57,7 @@ const INITIAL_DATA = {
     { id: "11", name: "sympathy", selected: false },
     { id: "12", name: "one-upping", selected: false },
     { id: "13", name: "commiserating", selected: false },
-    { id: "14", name: "personal storytelling", selected: false }
+    { id: "14", name: "storytelling", selected: false }
   ],
     partnerResponses: [
     { id: "1", name: "empathy", selected: false },
