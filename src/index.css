@@ -58,7 +58,7 @@ body {
     position: absolute;
     left: calc(50vw - 160px);
     width: 320px;
-    height: 500px;
+    height: 420px;
     top: 20vh;
     display: grid;
     grid-template-rows: 1fr 5fr .75fr;
@@ -68,22 +68,6 @@ body {
     cursor: pointer;
     border-radius: 5px;
 }
-/* 
-.date-toggle-div {
-    background-color: white;
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-    border-radius: 25px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-    padding: .5em 1.25em;
-}
-
-.date-toggle-div.selected {
-    box-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-} */
 
 .form-grid {
     display: grid;
@@ -96,7 +80,6 @@ body {
 
 .form-toggle-div {
     color:rgb(40, 40, 40);
-    /* background-color: white; */
     border-radius: 999px;
     font-size: .9em;
     height: 3em;
@@ -108,7 +91,7 @@ body {
     justify-content: center;
     align-items: center;
     user-select: none;
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);}
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);}
 
 .form-toggle-div.selected {
     box-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) #04785770;

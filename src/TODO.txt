@@ -2,15 +2,15 @@ General:
 
 
 Concepts:
-- design: better design for popup infobox
-- design/code: implement slideshow click functionality on infobox popups. nav to next item with arrows
+- design/code: CREATE NEW BRANCH implement slideshow click functionality on infobox popups. nav to next item with arrows
+- content: improve "intentional responses" content
 
 
 Logs:
 
 
 Insights:
-- decide which insights to show. Code implementation
+- Code implementation with sorted lists.
 
 
 Account:

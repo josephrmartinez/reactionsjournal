@@ -34,11 +34,7 @@ export default function Concepts() {
             <div className="fixed inset-0" onClick={props.toggleInfoBox}>
             <div className="infobox z-40">
                 <div className="font-mukta text-gray-500 text-lg tracking-wide font-bold text-center mx-4 my-8 leading-5">{infoBox.title}</div>
-                    <div className="font-mukta text-base text-gray-500 mx-5">{ infoBox.content }</div>
-                    {/* <div className="h-full w-full flex flex-row justify-around">
-                        <div>back</div>
-                        <div>next</div>
-                    </div> */}
+                    <div className="font-mukta text-base text-gray-500 mx-5 whitespace-pre-line">{infoBox.content}</div>
             </div>
             </div>
         )
@@ -97,73 +93,120 @@ let habitualReactions =
     [
     {
         concept: "giving advice",
-        fulltitle: "giving advice, problem solving, fixing with prescriptions",
-        description: "Listener tells the speaker what they should do."
+        fulltitle: "giving advice, problem solving",
+        description: `Listener tells the speaker what they should do.
+
+        Listener assumes the most helpful thing they can do is to give recommendations or describe how they would address the issue.`
     }, 
     {
         concept: "defensiveness",
         fulltitle: "defensiveness",
-        description: "Listener is acutely sensitive to criticism where there is none intended, gets defensive, dismissive, or incorrectly assumes the speaker is talking about them. Listener remains fixated on perceived criticism."
+        description: `Listener is acutely sensitive to criticism where there is none intended.
+
+        Gets defensive, dismissive, or incorrectly assumes the speaker is talking about them.
+        
+        "What does this have to do with me?"
+
+        Listener fixated on perceived threat or criticism.`
      },
      {
         concept: "changing subject",       
         fulltitle: "changing the subject",
-        description: "Listener makes a connection to something the speaker says and decides to shift the topic."
+         description: `Listener makes a connection to something the speaker says and decides to shift the topic.
+        
+        Listener picks up on details in the conversation and inserts themself into the narrative or relates it back to them.`
     },
     {          
-        concept: "diagnosing",
-        fulltitle: "diagnosing, labeling, static judgement",
-        description: "Listener interprets or evaluates speaker's behavior. Labels speaker with static judgement or diagnosis."
+        concept: "static labeling",
+        fulltitle: "static labeling, diagnosing",
+        description: `Listener interprets or evaluates speaker's behavior with a static label, judgement, or diagnosis. Listener tries to fit speaker into a framework or modality.
+        
+        "You always get so defensive in these situations."
+
+        "You see it that way because you're an INFP personality type."`
     }, 
     {
         concept: "dismissing feelings",
         fulltitle: "dismissing difficult feelings",
-        description: "Listener trys to make the speaker feel better with dismissive comments, even if well-intentioned: 'Everything is going to be okay.' 'There is no need to feel that way.' Dismisses difficult feelings instead of relating to them with curiosity."
+        description: `Listener trys to make the speaker feel better with dismissive comments, even if well-intentioned.
+        
+        "Everything is going to be okay."
+        
+        "There is no need to feel that way."
+        
+        Dismisses difficult feelings instead of relating to them with curiosity.`
     },     
     {
         concept: "sarcasm",
         fulltitle: "sarcasm",
-        description: "Listener replies with sarcasm, attempts to make a joke or inject humor into conversation. Keeping things at a  level."
+        description: `Listener replies with sarcasm, attempts to make a joke or inject humor into conversation. 
+        
+        Assumes that sarcasm is a good way to keep things light and easy-going.`
     },
     {
-        concept: "taking it personally",
-        fulltitle: "taking it personally",
-        description: "Listener assumes the main reason the speaker is talking to them is that the speaker's situation has to do with them. Listener inserts themself into the narrative."
+        concept: "leading questions",
+        fulltitle: "leading questions, interrogating",
+        description: `Listener uses directed or continued questioning to prompt speaker into explanation.
+        
+        Listener challenges speaker into "self-awareness"
+        
+        Subtle blame. New age bullying. Power over.`
     },
     {
         concept: "shutting down",
         fulltitle: "shutting down",
-        description: "Listener closes down, disengages from interaction. Self-preservation, withdrawing, minimizing response."
+        description: `Listener closes down, disengages from interaction.
+        
+        Listener rehearses what they want to say but refrains from speaking up.
+
+        Self-preservation, withdrawing, minimizing response.`
     },
     {
         concept: "devil's advocate",
         fulltitle: "devil's advocate",
-        description: "Listener plays devil's advocate or asks the speaker if they've considered the other person's perspective. Tries to empathize with the “other” before the speaker."
+        description: `Listener plays devil's advocate or asks the speaker if they've considered the other person's perspective. 
+        
+        Listener is more invested in the "other" perspective than hearing out the speaker.`
     },
     {
         concept: "intellectualizing",
         fulltitle: "intellectualizing",
-        description: "Listener references expert opinion, academic studies, a book or article they recently read, or other “authoritative” source to make a point."
+        description: `Listener references expert opinion, academic studies, a book, or article they recently read.
+        
+        Brings in an “authoritative” source to make a point.
+        
+        "If you were familiar with Carl Rogers' work on unconditional positive regard, this would make a lot more sense."`
     },
     {
         concept: "sympathy",
-        fulltitle: "sympathy, feeling sorry for the other person with pity",
-        description: "Listener shares their own feelings about what the speaker said rather than holding space to honor the speaker’s unique feelings and needs."
+        fulltitle: "sympathy",
+        description: `Listener makes an assumption about how the speaker must be feeling instead of taking time to really see where they are at.
+        
+        Listener shares their feelings of condolences rather than inquiring about the speaker's unique feelings and needs.`
     },
     {
         concept: "one-upping",
         fulltitle: "one-upping",
-        description: "Listener is intent on telling the speaker that they've been through something even more significant than what the speaker is currently describing."
+        description: `Listener tells the speaker that they've been through something even more significant than what the speaker is currently describing.
+        
+        Related: storytelling, commiserating`
     },
     {
         concept: "commiserating",
-        fulltitle: "commiserating, over-identification",
-        description: "Listener agrees with the speaker through over-identification; does not honor the uniqueness of speaker's position. 'I know exactly what you mean.' 'I've had that exact experience.'"
+        fulltitle: "commiserating",
+        description: `Listener agrees with the speaker through over-identification; does not honor the uniqueness of speaker's position.
+        
+        "I know exactly what you mean."
+
+        "I've had that exact experience!"`
     },
     {
         concept: "storytelling",
         fulltitle: "personal storytelling",
-        description: "Listener takes the focus away from speaker and tells stories relating back to themself."
+        description: `Listener takes the focus away from speaker and tells stories relating back to themself.
+        
+        Makes a point by telling a story. Assumes people should listen to the story and find it entertaining or valuable. 
+        `
     },
     ]
 
