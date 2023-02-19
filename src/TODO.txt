@@ -7,6 +7,7 @@ Concepts:
 
 
 Logs:
+- Sort logs with most recent at the top
 
 
 Insights:
