@@ -5,6 +5,66 @@ export default function Insights() {
     const[logData, setLogData] = useState(
         JSON.parse(localStorage.getItem("reactionsJournalLogData")) || starterData)
     
+
+    function createArray(category) {
+        let returnArray = []
+        logData.map(each => {
+            let returnObj = each[category].filter(each => each.selected);
+        returnObj.forEach(each => returnArray.push(each.name))
+        })
+        return returnArray
+    }
+
+    function returnTopThree(arr) {
+        const map = {};
+        let keys = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (map[arr[i]]) {
+                map[arr[i]]++;
+            } else {
+                map[arr[i]] = 1;
+            }
+        }
+        for (let i in map) {
+            keys.push(i);
+        }
+        keys = keys.sort((a, b) => {
+
+            if (map[a] === map[b]) {
+
+                if (a > b) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            }
+            else {
+                return map[b] - map[a];
+            }
+        })
+        .slice(0, 3);
+        return keys;
+    };
+    
+    
+    function FrequentItem(props) {
+        return (
+            <div className="w-fit text-gray-500 text-sm" >{props.text}</div>
+        )
+    }
+
+    const frequentUserReactions = 
+        returnTopThree(createArray("userReactions")).map(each => <FrequentItem text={each} key={each} />)
+
+    const frequentUserResponses = 
+        returnTopThree(createArray("userResponses")).map(each => <FrequentItem text={each} key={each} />)
+
+    const frequentPartnerReactions = 
+        returnTopThree(createArray("partnerReactions")).map(each => <FrequentItem text={each} key={each} />)
+
+    const frequentPartnerResponses = 
+        returnTopThree(createArray("partnerResponses")).map(each => <FrequentItem text={each} key={each} />)
+
     
     return (
         <>
@@ -13,30 +73,26 @@ export default function Insights() {
             </div>}
             {logData.length >= 5 && <div className="font-mukta flex flex-col my-auto text-gray-700">
                 <div className='text-lg font-semibold text-gray-700'>conversations logged: </div>
-                <div className="ml-4 mb-8 mt-2 text-gray-500 text-sm">{logData.length}</div>
+                <div className="ml-4 mb-4 mt-1 text-gray-500 text-sm">{logData.length}</div>
 
                 <div className='text-lg font-semibold text-gray-700'>your frequent reactions:</div>
-                <div className="ml-4 mb-8 mt-2 flex flex-col">
-                    <div className="w-fit text-gray-500 text-sm" >defensiveness</div>
-                    <div className="w-fit text-gray-500 text-sm" >sarcasm</div>
+                <div className="ml-4 mb-6 mt-1 flex flex-col">
+                    {frequentUserReactions}
                 </div>
 
                 <div className='text-lg font-semibold text-gray-700'>your frequent responses:</div>
-                <div className="ml-4 mb-8 mt-2 flex flex-col">
-                    <div className="w-fit text-gray-500 text-sm" >quiet listening</div>
-                    <div className="w-fit text-gray-500 text-sm" >empathy</div>
+                <div className="ml-4 mb-6 mt-1 flex flex-col">
+                    {frequentUserResponses}
                 </div>
 
                 <div className='text-lg font-semibold text-gray-700'>reactions frequently observed:</div>
-                <div className="ml-4 mb-8 mt-2 flex flex-col">
-                    <div className="w-fit text-gray-500 text-sm" >giving advice</div>
-                    <div className="w-fit text-gray-500 text-sm" >storytelling</div>
+                <div className="ml-4 mb-6 mt-1 flex flex-col">
+                    {frequentPartnerReactions}
                 </div>
 
                 <div className='text-lg font-semibold text-gray-700'>responses frequently observed:</div>
-                <div className="ml-4 mb-8 mt-2 flex flex-col">
-                    <div className="w-fit text-gray-500 text-sm" >reflecting feelings</div>
-                    <div className="w-fit text-gray-500 text-sm" >quiet listening</div>
+                <div className="ml-4 mb-6 mt-1 flex flex-col">
+                    {frequentPartnerResponses}
                 </div>
             </div>}
         </>

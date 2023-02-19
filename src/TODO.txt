@@ -10,7 +10,6 @@ Logs:
 
 
 Insights:
-- Code implementation with sorted lists.
 
 
 Account:
