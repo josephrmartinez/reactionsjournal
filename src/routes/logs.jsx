@@ -142,7 +142,9 @@ export default function Logs() {
         )
     }
     
-    // TODO: sort logs with most recent at the top
+    // This method is sorting the logData dictionaries according to the conversation date. 
+    // Is this overwriting the data inappropriately? 
+    logData.sort((a, b) => Date.parse(b.conversationDate) - Date.parse(a.conversationDate));
 
     const logs = logData.map(each => <Log
         conversationID={each.conversationID}

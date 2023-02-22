@@ -6,6 +6,7 @@ export default function Insights() {
         JSON.parse(localStorage.getItem("reactionsJournalLogData")) || starterData)
     
 
+    console.log(logData)
     function createArray(category) {
         let returnArray = []
         logData.map(each => {

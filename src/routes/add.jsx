@@ -106,7 +106,7 @@ export default function Add() {
         
         localStorage.setItem("entry", JSON.stringify(data));
         // Save data back to local storage
-        existingData.push(data);
+        existingData.unshift(data);
         localStorage.setItem("reactionsJournalLogData", JSON.stringify(existingData));
     
 
