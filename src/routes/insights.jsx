@@ -96,6 +96,7 @@ export default function Insights() {
                     {frequentPartnerResponses}
                 </div>
             </div>}
+            <div className="text-center text-sm text-gray-500 mb-4">site created by <a className="underline" href="https://josephm.dev/">josephm.dev</a></div>
         </>
     )
 }

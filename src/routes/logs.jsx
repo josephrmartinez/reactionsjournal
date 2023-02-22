@@ -143,7 +143,7 @@ export default function Logs() {
     }
     
     // This method is sorting the logData dictionaries according to the conversation date. 
-    // Is this overwriting the data inappropriately? 
+    // Is this overwriting the data inappropriately?
     logData.sort((a, b) => Date.parse(b.conversationDate) - Date.parse(a.conversationDate));
 
     const logs = logData.map(each => <Log
