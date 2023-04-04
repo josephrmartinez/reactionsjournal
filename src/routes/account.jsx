@@ -34,9 +34,3 @@ export default function Account() {
         </div>
     )
 }
-
-// <button
-//                     className="bg-emerald-700/60 hover:bg-amber-500/95 text-white font-semibold py-2 px-4  rounded-full shadow active:shadow-none my-5"
-//                     onClick={handleClearLocalStorage}
-//                     >
-//                     {accountData == starterData ? "local storage cleared" : "clear local storage"}</button>

@@ -7,7 +7,7 @@ export default function NotesAndSubmitForm({ updateFields, notes }) {
             <textarea
                 autoFocus 
                 type="textArea"
-                style={{width:"100%", height: "100px" }}
+                style={{width:"100%", height: "100px", borderRadius: '3px'}}
                 className="p-3"  
                 placeholder="optional"    
                 value={notes}
