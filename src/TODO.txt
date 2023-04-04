@@ -2,12 +2,13 @@ General:
 
 
 Concepts:
+
 - design/code: CREATE NEW BRANCH implement slideshow click functionality on infobox popups. nav to next item with arrows
 - content: improve "intentional responses" content
 
 
 Logs:
-- Sort logs with most recent at the top
+
 
 
 Insights:

@@ -13,7 +13,7 @@ export default function Concepts() {
             color: props.isSelected ? "#4b5563" : "#B6B6B6",
         }
         return (
-            <div onClick={toggleHeader} style={styles} className="m-0 cursor-pointer w-1/2 h-14 rounded-full flex flex-col items-center justify-center">
+            <div onClick={toggleHeader} style={styles} className="cursor-pointer w-1/2 h-14 rounded-full flex flex-col items-center justify-center">
                 <div className="text-lg text-center leading-5 font-mukta font-bold tracking-wide h-10 w-6/12">{props.text}</div>
             </div>
         )
@@ -22,7 +22,7 @@ export default function Concepts() {
 
     function Header(props) {
         return (
-            <div className="flex flex-row w-11/12 items-center border rounded-full justify-between">
+            <div className="flex flex-row w-10/12 items-center border rounded-full justify-between">
                 <HeaderToggleOption text={`habitual\nreactions`} isSelected={headerHabituals}/>
                 <HeaderToggleOption text="intentional responses" isSelected={!headerHabituals}/>
             </div>
