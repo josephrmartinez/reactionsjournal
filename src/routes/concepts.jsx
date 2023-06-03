@@ -8,21 +8,62 @@ export default function Concepts() {
 
 
     function HeaderToggleOption(props) {
-        const styles = {
-            border: props.isSelected ? "2px solid #04785780" : "none",
-            color: props.isSelected ? "#4b5563" : "#B6B6B6",
-        }
+        const borderStyle = props.isSelected
+            ? "border border-2 border-green-700 "
+            : "border-none";
+
+        const textStyle = props.isSelected
+            ? "text-gray-700"
+            : "text-gray-300";
+        
         return (
-            <div onClick={toggleHeader} style={styles} className="cursor-pointer w-1/2 h-14 rounded-full flex flex-col items-center justify-center">
-                <div className="text-lg text-center leading-5 font-mukta font-bold tracking-wide h-10 w-6/12">{props.text}</div>
+            <div
+                onClick={toggleHeader}
+                className={`cursor-pointer w-1/2 h-14 rounded-full flex flex-col items-center justify-center ${borderStyle}`}>
+                <div
+                    className={`text-lg text-center leading-5 font-mukta font-bold tracking-wide h-10 w-6/12 ${textStyle}`}>{props.text}</div>
             </div>
         )
     }
 
 
+    // TODO: IMPLEMENT TRANSITION DURATION
+    // style={styles}
+
+    // const styles = {
+        //     border: props.isSelected ? "2px solid #04785780" : "none",
+        //     color: props.isSelected ? "#4b5563" : "#B6B6B6",
+        //     transition: "border-color 400ms ease, color 200ms ease",
+        // }
+
+    // function HeaderToggleOption(props) {
+    //     const textStyle = props.isSelected
+    //         ? "text-gray-700"
+    //         : "text-gray-300";
+        
+    //     const isSelected = props.isSelected
+        
+        
+    //     return (
+    //         <div
+    //             onClick={toggleHeader}
+    //             className={({ isSelected }) =>
+    //                 isSelected
+    //                     ? "transition-all cursor-pointer w-1/2 h-14 rounded-full flex flex-col items-center justify-center border-2 border-green-700"
+    //                     : "transition-all cursor-pointer w-1/2 h-14 rounded-full flex flex-col items-center justify-center border-none"
+    //             }>
+    //             <div
+    //                 className={`text-lg text-center leading-5 font-mukta font-bold tracking-wide h-10 w-6/12 ${textStyle}`}>{props.text}</div>
+    //         </div>
+    //     )
+    // }
+    
+
+    
+    
     function Header(props) {
         return (
-            <div className="flex flex-row w-10/12 items-center border rounded-full justify-between">
+            <div className="transition-all flex flex-row w-10/12 items-center border rounded-full justify-between">
                 <HeaderToggleOption text={`habitual\nreactions`} isSelected={headerHabituals}/>
                 <HeaderToggleOption text="intentional responses" isSelected={!headerHabituals}/>
             </div>

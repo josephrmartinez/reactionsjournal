@@ -96,4 +96,3 @@ body {
 .form-toggle-div.selected {
     box-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) #04785770;
 }
-
