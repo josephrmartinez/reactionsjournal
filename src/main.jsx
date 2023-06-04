@@ -12,6 +12,9 @@ import Add from './routes/add';
 import Concepts from './routes/concepts';
 import Logs from './routes/logs';
 import Insights from './routes/insights';
+import Reactions from './routes/reactions';
+import Responses from './routes/responses';
+
 
 const router = createBrowserRouter([
   {
@@ -29,7 +32,17 @@ const router = createBrowserRouter([
       },
       {
         element: <Concepts />,
-        index: true
+        path: "/reactionsjournal/concepts",
+        children: [
+          {
+            path: "/reactionsjournal/concepts/reactions",
+            element: <Reactions />
+          },
+          {
+            path: "/reactionsjournal/concepts/responses",
+            element: <Responses />
+          },   
+        ]
       },
       {
         path: "/reactionsjournal/insights",

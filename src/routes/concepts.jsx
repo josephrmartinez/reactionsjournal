@@ -1,10 +1,11 @@
 import { useState } from "react"
+import { Outlet } from "react-router-dom";
 
 
 
 export default function Concepts() {
     const [headerHabituals, setHeaderHabituals] = useState(true)
-    const [infoBox, setInfoBox] = useState({isDisplayed: false, title: "", content: ""})
+    const [infoBox, setInfoBox] = useState({ isDisplayed: false, title: "", content: "" })
 
 
     function HeaderToggleOption(props) {
@@ -63,7 +64,7 @@ export default function Concepts() {
     
     function Header(props) {
         return (
-            <div className="transition-all flex flex-row w-10/12 items-center border rounded-full justify-between">
+            <div className="flex flex-row w-10/12 items-center border rounded-full justify-between">
                 <HeaderToggleOption text={`habitual\nreactions`} isSelected={headerHabituals}/>
                 <HeaderToggleOption text="intentional responses" isSelected={!headerHabituals}/>
             </div>
@@ -120,14 +121,18 @@ export default function Concepts() {
     return (
         <div className="flex items-center flex-col h-full w-full">
             <Header />
-            <div className="content-grid">
-                {headerHabituals && habituals}
-                {!headerHabituals && intentionals}
-            </div>
-            {infoBox.isDisplayed && <InfoBox toggleInfoBox={toggleInfoBox} />}
+            <Outlet />
+            
         </div>
     )
 }
+
+
+{/* <div className="content-grid">
+                {headerHabituals && habituals}
+                {!headerHabituals && intentionals}
+            </div> */}
+            // {infoBox.isDisplayed && <InfoBox toggleInfoBox={toggleInfoBox} />}
 
 
 let habitualReactions = 
