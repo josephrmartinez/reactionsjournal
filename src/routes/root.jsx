@@ -9,7 +9,7 @@ export default function Root() {
         <nav className="flex items-center w-full shadow-inner sm:shadow-none">
           <ul className="grid grid-cols-5 gap-1 w-full h-full">
           <NavLink
-            to={`/reactionsjournal/`}
+            to={`/reactionsjournal/concepts/reactions`}
             end
             className={({ isActive }) =>
               isActive

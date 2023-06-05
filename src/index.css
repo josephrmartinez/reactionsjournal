@@ -8,12 +8,14 @@
 
 *{
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html{
     overflow: hidden;
     width: 100%;
     background-color: #fdfdfd;
+    
 }
 
 body {

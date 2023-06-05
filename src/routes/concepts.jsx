@@ -14,14 +14,14 @@ export default function Concepts() {
                     to={`/reactionsjournal/concepts/reactions`}
                     end
                     className={({ isActive }) =>
-                        `transition-all cursor-pointer w-1/2 h-14 rounded-full flex flex-col items-center justify-center ${isActive ? `border-2 border-green-700 text-gray-700` : `border-2 border-white text-gray-500` }`}>
+                        `transition-all cursor-pointer w-1/2 h-14 rounded-full flex flex-col items-center justify-center ${isActive ? `border-2 border-emerald-700/50 text-gray-700` : `border-2 border-white text-gray-500` }`}>
                     <div className='transition-all text-lg text-center leading-5 font-mukta font-bold tracking-wide h-10 w-1/2 flex flex-col items-center'><div>habitual</div><div>reactions</div></div>
                 </NavLink>
                 <NavLink
                     to={`/reactionsjournal/concepts/responses`}
                     end
                     className={({ isActive }) =>
-                        `transition-all cursor-pointer w-1/2 h-14 rounded-full flex flex-col items-center justify-center ${isActive ? `border-2 border-green-700 text-gray-700` : `border-2 border-white text-gray-500` }`}>
+                        `transition-all cursor-pointer w-1/2 h-14 rounded-full flex flex-col items-center justify-center ${isActive ? `border-2 border-emerald-700/50 text-gray-700` : `border-2 border-white text-gray-500` }`}>
                     <div className='transition-all text-lg text-center leading-5 font-mukta font-bold tracking-wide h-10 w-1/2 flex flex-col items-center'><div>intentional</div><div>responses</div></div>
                 </NavLink>
             </ul>
