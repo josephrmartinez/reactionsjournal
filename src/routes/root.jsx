@@ -1,7 +1,27 @@
-import { Outlet, NavLink, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Outlet, NavLink, Link, useLocation } from "react-router-dom";
 
 
 export default function Root() {
+
+  let location = useLocation()
+  console.log(location.pathname)
+
+  const [conceptSection, setConceptSection] = useState(false)
+
+  useEffect(() => {
+  if (
+    location.pathname === "/reactionsjournal/concepts/reactions" ||
+    location.pathname === "/reactionsjournal/concepts/responses"
+  ) {
+    setConceptSection(true);
+    console.log(conceptSection)
+  } else {
+    setConceptSection(false);
+        console.log(conceptSection)
+
+  }
+}, [location.pathname]);
 
   return (
       <div className="container">
@@ -11,7 +31,7 @@ export default function Root() {
           <NavLink
             to={`/reactionsjournal/concepts/reactions`}
             className={({ isActive }) =>
-              isActive
+              (isActive || window.location.pathname.startsWith('/reactionsjournal/concepts/'))
                 ? "transition-all flex flex-col items-center justify-evenly rounded-full stroke-amber-500 text-gray-500 font-semibold"
                 : "transition-all flex flex-col items-center justify-evenly rounded-full stroke-gray-500 text-gray-500"}>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} className="w-7 h-7">
