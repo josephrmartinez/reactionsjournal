@@ -126,7 +126,7 @@ let habitualReactions =
     },
     ]
 
-let habituals = habitualReactions.map(each => <Concept handleConceptClick={() => handleConceptClick(each)} key={each.concept} text={each.concept}/>)
+let reactions = habitualReactions.map(each => <Concept handleConceptClick={() => handleConceptClick(each)} key={each.concept} text={each.concept}/>)
  
 
     function InfoBox(props) {
@@ -169,7 +169,7 @@ let habituals = habitualReactions.map(each => <Concept handleConceptClick={() =>
     return (
         <>
         <div className="content-grid">
-            {habituals}
+            {reactions}
         </div>
         {infoBox.isDisplayed && <InfoBox toggleInfoBox={toggleInfoBox} />}
         </>
