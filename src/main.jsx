@@ -21,6 +21,7 @@ const router = createBrowserRouter([
     path: "/reactionsjournal/",
     element: <Root />,
     errorElement: <ErrorPage />,
+    redirectTo: "/reactionsjournal/logs",
     children: [
       {
         path: "/reactionsjournal/account",
@@ -49,8 +50,9 @@ const router = createBrowserRouter([
         element: <Insights />,
       },
       {
-        path: "/reactionsjournal/logs",
+        path: "",
         element: <Logs />,
+        index: true,
       },
     ],
   },

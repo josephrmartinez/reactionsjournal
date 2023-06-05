@@ -10,7 +10,6 @@ export default function Root() {
           <ul className="grid grid-cols-5 gap-1 w-full h-full">
           <NavLink
             to={`/reactionsjournal/concepts/reactions`}
-            end
             className={({ isActive }) =>
               isActive
                 ? "transition-all flex flex-col items-center justify-evenly rounded-full stroke-amber-500 text-gray-500 font-semibold"
@@ -22,7 +21,7 @@ export default function Root() {
           </NavLink>
           
           <NavLink
-            to={`/reactionsjournal/logs`}
+            to={`/reactionsjournal/`}
             className={({ isActive }) =>
               isActive
                 ? "transition-all flex flex-col items-center justify-evenly rounded-full stroke-amber-500 text-gray-500 font-semibold"
