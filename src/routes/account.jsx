@@ -23,7 +23,7 @@ export default function Account() {
             <div className="my-4">To delete your logs, clear your browsing data or click the button below:</div>
             <div className="m-auto">
                 <button
-  className="bg-emerald-700/60  drop-shadow-lg shadow-md active:shadow text-white font-semibold py-2 px-4 rounded-full  my-5"
+  className="bg-emerald-700/60  hover:bg-emerald-700/70 duration-300 drop-shadow-lg shadow-md active:shadow text-white font-semibold py-2 px-4 rounded-full  my-5"
   onClick={handleClearLocalStorage}
 >
   {accountData == starterData ? "local storage cleared" : "clear local storage"}

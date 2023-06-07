@@ -134,7 +134,7 @@ export default function Logs() {
                 </div>}
                 
                 <div className="grid grid-cols-3">
-                    {props.entryExpanded && <div className="col-start-2 justify-self-center text-sm text-gray-300 px-5 cursor-pointer" onClick={props.handleDeleteLog}>delete</div>}
+                    {props.entryExpanded && <div className="col-start-2 justify-self-center text-sm text-gray-300 hover:text-gray-400 duration-300 px-5 cursor-pointer" onClick={props.handleDeleteLog}>delete</div>}
                     <div className="col-start-3 justify-self-end pl-6 cursor-pointer" onClick={props.handleExpandContent}><FontAwesomeIcon icon={props.entryExpanded ? faAngleUp : faAngleDown} size="1x"/></div>
                 </div>
 
