@@ -70,7 +70,7 @@ export default function Insights() {
     return (
         <>
             {logData.length < 5 && <div className="font-mukta flex flex-col items-center m-auto w-4/5 text-gray-700">
-                <div className="text text-lg text-gray-600 font-medium text-center">Add five entries to start seeing insights on common reactions and communication patterns.</div>
+                <div className="font-mukta text-lg text-gray-600 font-medium text-center">Add five entries to start seeing insights on <br></br> common reactions and communication patterns.</div>
             </div>}
             {logData.length >= 5 && <div className="font-mukta flex flex-col my-auto text-gray-700">
                 <div className='text-lg font-semibold text-gray-700'>conversations logged: </div>
