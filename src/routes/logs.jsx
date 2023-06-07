@@ -167,7 +167,7 @@ export default function Logs() {
     return (
     <>
         {logData.length === 0 ?
-        <div className="m-auto font-bold">Add entries to view logs.</div> :
+        <div className="font-mukta text-lg text-gray-600 font-medium text-center my-auto">Add entries to view logs.</div> :
         <div className="overflow-y-auto flex flex-col w-full h-full items-center gap-4">
             {logs}
         </div>}
