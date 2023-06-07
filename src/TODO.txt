@@ -5,6 +5,9 @@ Concepts:
 
 - design/code: CREATE NEW BRANCH implement slideshow click functionality on infobox popups. nav to next item with arrows
 - content: improve "intentional responses" content
+- space concepts out more vertically to take up space evenly
+- redesign grid so that the concepts look more like clickable items
+- redesign toggle header? should be more intuitively something that can be switched. 
 
 
 Logs:
@@ -18,6 +21,8 @@ Account:
 
 
 Add:
+- Revise first page of the log form. Better visual balance. 
+- Revise button design on subsequent pages. 
 
 
 

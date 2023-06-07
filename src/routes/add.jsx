@@ -110,7 +110,7 @@ export default function Add() {
         localStorage.setItem("reactionsJournalLogData", JSON.stringify(existingData));
     
 
-        navigate('/reactionsjournal/logs')
+        navigate('/reactionsjournal/')
     };
     
 
