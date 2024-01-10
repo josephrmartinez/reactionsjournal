@@ -15,11 +15,8 @@ export default function Root() {
     location.pathname === "/reactionsjournal/concepts/responses"
   ) {
     setConceptSection(true);
-    console.log(conceptSection)
   } else {
     setConceptSection(false);
-        console.log(conceptSection)
-
   }
 }, [location.pathname]);
 

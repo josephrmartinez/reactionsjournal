@@ -6,6 +6,9 @@ import UserResponsesForm from "./addForms/UserResponsesForm"
 import PartnerReactionsForm from "./addForms/PartnerReactionsForm"
 import PartnerResponsesForm from "./addForms/PartnerResponsesForm"
 import NotesAndSubmitForm from "./addForms/NotesAndSubmitForm"
+import WithForm from "./addForms/WithForm";
+import DateForm from "./addForms/DateForm";
+import LocationForm from "./addForms/LocationForm"
 import { useNavigate } from "react-router-dom"
 import { starterData } from "../starterData"
 
@@ -85,7 +88,9 @@ export default function Add() {
 
     const { steps, currentStepIndex, step, isLastStep, back, next } =
         useMultistepForm([
-            <DateLocationWithForm {...data} updateFields={updateFields} />,
+            <WithForm {...data} updateFields={updateFields} />,
+            <DateForm {...data} updateFields={updateFields} />,
+            <LocationForm {...data} updateFields={updateFields} />,
             <UserReactionsForm {...data} updateFields={updateFields} />,
             <UserResponsesForm {...data} updateFields={updateFields} />,
             <PartnerReactionsForm {...data} updateFields={updateFields} />,
@@ -117,7 +122,9 @@ export default function Add() {
 
     return (
         <div className="font-mukta h-full w-4/5 flex flex-col items-center">
-            <form className="h-full w-full grid grid-cols-1  grid-rows-[10%_80%_10%]" onSubmit={onSubmit}>
+            <form 
+            className={`w-full grid grid-cols-1 ${currentStepIndex > 2 && currentStepIndex < 7 ? "h-full grid-rows-[10%_80%_10%]" : "h-1/3"}`} 
+            onSubmit={onSubmit}>
                 {step}
             <div className="flex flex-row justify-around items-center">
                 {currentStepIndex === 0 && <div className="w-16"></div>}
