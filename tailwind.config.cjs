@@ -19,6 +19,9 @@ module.exports = {
         'fraunces': ['Fraunces', 'serif'],
         'mukta': ['Mukta', 'sans-serif']
       },
+      spacing: {
+        'safe-bottom': 'env(safe-area-inset-bottom)'
+      }
     },
   },
   plugins: [],

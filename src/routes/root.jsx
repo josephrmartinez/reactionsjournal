@@ -5,7 +5,6 @@ import { Outlet, NavLink, Link, useLocation } from "react-router-dom";
 export default function Root() {
 
   let location = useLocation()
-  console.log(location.pathname)
 
   const [conceptSection, setConceptSection] = useState(false)
 
@@ -21,8 +20,10 @@ export default function Root() {
 }, [location.pathname]);
 
   return (
-      <div className="container">
-        <div id="detail" className="flex items-center w-full h-full flex-col pt-6"><Outlet /></div>
+      <div className="container h-[calc(100dvh)]">
+        <div id="detail" className="flex items-center w-full flex-col pt-6">
+          <Outlet />
+        </div>
         <nav className="flex items-center w-full shadow-inner sm:shadow-none">
           <ul className="grid grid-cols-5 gap-1 w-full h-full">
           <NavLink
